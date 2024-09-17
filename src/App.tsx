@@ -18,6 +18,11 @@ const App = () => {
         onClick={() => textAreaRef.current!.focus()}
         className="min-h-60 bg-neutral-900 text-slate-100 font-spaceGrotesk whitespace-pro-wrap text-xl min-w-full p-5 overflow-x-hidden"
         >
+          {textValue.length === 0 && (
+          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-400">
+            Tap here and add text
+          </span>
+        )}
           <AnimatePresence>
             {textValue.split("").map((letter, index) =>{
               return (
